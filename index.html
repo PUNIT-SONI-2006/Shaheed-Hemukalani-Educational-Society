@@ -1,18 +1,133 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Lets Login!!</title>
-    <link rel="stylesheet" href="shkesbpl.css">
+    <link rel="icon" type="image/png"
+        href="https://i.pinimg.com/originals/23/2d/53/232d5305d301d7891381b7026518b1cd.png">
+    <!-- <link rel="stylesheet" href="shkesbpl.css"> -->
 </head>
+<style>
+    @import url('https://fonts.googleapis.com/css2?family=Oswald&display=swap');
+
+    body {
+        margin: 0;
+        padding: 0;
+        display: flex;
+        justify-content: center;
+        min-height: 100vh;
+        align-items: center;
+        background-color: #031321;
+    }
+
+    .container {
+        width: max-content;
+        display: flex;
+        /* background-color: blueviolet; */
+        border: 10px solid darkgreen;
+        border-radius: 15px;
+    }
+
+    .form {
+        background-color: aqua;
+        min-width: 35%;
+
+    }
+
+    h4 {
+        position: relative;
+        padding-left: 45%;
+        text-transform: uppercase;
+        letter-spacing: 8px;
+        justify-content: center;
+        align-items: center;
+    }
+
+    label {
+        font-family: 'Oswald', sans-serif;
+        text-transform: uppercase;
+        font-weight: bold;
+        letter-spacing: 3px;
+    }
+
+    .not-devices {
+        display: none;
+    }
+
+    /* media Qwery's */
+    @media screen and (max-width:415px) {
+        label {
+            font-size: 10px;
+        }
+    }
+
+    @media screen and (max-width:310px) {
+        label {
+            font-size: 7px;
+            font-weight: bolder;
+            letter-spacing: 1.5px;
+        }
+
+        h4 {
+            left: -15%;
+        }
+    }
+
+    .school-selection-heading {
+        top: 5%;
+        position: relative;
+        font-weight: 700;
+        font-family: 'Oswald';
+    }
+
+    /* Media Qwery for not showing login form */
+    @media screen and (max-width:199px) {
+        .container {
+            display: none;
+        }
+
+        .not-devices {
+            display: block;
+            background-color: aqua;
+            font-weight: bolder;
+            text-transform: uppercase;
+        }
+    }
+</style>
+
 <body>
-<!-- bodyFormStart -->
-<div class="form">
-    <h4>Login</h4>
-    <h3>Shaheed Hemu Kalani Educational Society</h3>
-</div>
-<!-- bodyFormEnd -->
+    <div class="not-devices">
+        Sorry you can't access it,View in Dekstop Mode.
+    </div>
+    <!-- bodyFormStart -->
+    <div class="container">
+        <div class="form">
+            <h4>Login</h4>
+            <label>Shaheed Hemu Kalani Educational Society</label>
+            <div class="school-selection-heading">Select School/College Name </div>
+            <div class="selection">
+                <select name="school-name" id="sn">
+                    <option value="NONE">NONE</option>
+                    <option value="MGPS">MGPS</option>
+                    <option value="NHLPS">NHLPS</option>
+                    <option value="VPS">VPS</option>
+                    <option value="RHK">RHK</option>
+                    <option value="ARJAN">ARJAN</option>
+                    <option value="KLVGFS">KLVGFS</option>
+                    <option value="CHI">CHIGS</option>
+                    <option value="KCPS">KCPS</option>
+                    <option value="SHKES">SHKES</option>
+                    <option value="SHGC">SHGC</option>
+                    <option value="SHM">SHM</option>
+
+                </select>
+            </div>
+        </div>
+    </div>
+    <!-- bodyFormEnd -->
 </body>
+
 </html>
